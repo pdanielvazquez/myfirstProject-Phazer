@@ -322,3 +322,6 @@ class Game extends Phaser.Scene {
 }
 ```
 
+Finalmente, una vez guardados los cambios en `Game.js` presiona el botón `Play` para ejecutar el juego.
+
+![alt text](./phaser-actualizaciones/image-19.png)
