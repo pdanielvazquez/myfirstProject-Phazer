@@ -1,100 +1,324 @@
-# Mi primer video juego con Phazer
+# Mi primer video juego con Phaser Desktop
 
-## Recomendaciones
-- Es deseable tener una experiencia básica en Javascript sin embargo, no es obligatorio.
-- Tener instalado Phazer Launcher https://phaser.io/download/phaser-launcher
-<img width="1895" height="979" alt="image" src="https://github.com/user-attachments/assets/549a3436-5dd1-4b30-b597-7b3cf5c7f02a" />
-<img width="1895" height="979" alt="image" src="https://github.com/user-attachments/assets/7c209456-c969-4124-bad9-6a7cc97682c2" />
-- Descargar la carpeta de *assets.zip* https://drive.google.com/file/d/1m22CDt9PY7RsNF_43NayvQMfnty1Rpvu/view?usp=sharing
+Para acceder a la plataforma *Phaser* para crewar tu primer video juego da click https://phaser.io/.
 
-## Paso 1. Crear un nuevo proyecto
+![alt text](./phaser-actualizaciones/image.png)
 
-- Ir a la pestaña de Projects y seleccionar *Nuevo*, y seleccionar un template como *Snake*.
-<img width="1272" height="711" alt="image" src="https://github.com/user-attachments/assets/83d3745b-b975-4a7b-a961-54d56cf310fc" />
+## Antes de construir el juego
 
-- Seleccionar una carpeta, asignar un nombre y crear.
-<img width="1272" height="711" alt="image" src="https://github.com/user-attachments/assets/60253f72-dc96-40f5-8a57-df1e1fd0ab4f" />
+1. Requieres una cuenta de correo electrónico de *Google* (preferentemente) o *Microsoft* a la cual puedas acceder (de uso frecuente).
+2. Accede a tu sesión de correo.
+3. Crea una cuenta en Phaser, accede directamente desde aquí https://phaser.io/login y presiona en la opción de tu proveedor de correo electrónico.
 
-## Paso 2. Identificar la estructura del proyecto 
+![alt text](./phaser-actualizaciones/image-1.png)
 
-- **Archivos y carpetas**: (ubicado del lado izquierdo de la pantalla) Muestra la estructura del proyecto.
-<img width="1606" height="891" alt="image" src="https://github.com/user-attachments/assets/f218bf5f-3991-4b45-9c37-71b17833e09e" />
+4. Concede permisos para que Phaser reconozca tu nombre y correo dando click en *Continuar*
 
-- **Ejecutar projecto**: En la parte superior se muestra un botón de reproducir para ejecutar el video juego e ir visualizando los cambios aplicados.
-<img width="1605" height="888" alt="image" src="https://github.com/user-attachments/assets/3177e0a4-0fb5-4b6d-9d8b-6bb77a6ca4a4" />
+![alt text](./phaser-actualizaciones/image-2.png)
 
-- **Acceso rápido a herramientas y recursos**: Serie de botones ubicados en la parte superior derecha que ofrecen diferentes funcionalidades como exportar proyecto a .zip, documentación, etc.
-<img width="1606" height="890" alt="image" src="https://github.com/user-attachments/assets/b1cf8476-83a9-463d-8c57-5003d5a5e135" />
+5. Verifica si tus datos son correctos !Ya estas listo para comenzar! Selecciona la opción *Open the Phaser Desktop*.
 
-Algunos archivos/carpetas importantes que hay que identificar son:
-- **project.config**: Contiene algunos parámetros generales de configuración del proyecto como el nombre del juego, el tamaño, versión, etc.
-- **src**: Esta carpte contiene una archivo principal *main.js* que se encarga de la gestión de las escenas que componen el juego.
-- **scenes**: Esta carpeta contiene cada una de las escenas que en conjunto ayudan a estructurar al juego.
-- **assets**: Esta carpeta contiene imagenes, sonidos o cualquier otro recurso multimedia que pueda ocupar el proyecto.
-<img width="1603" height="893" alt="image" src="https://github.com/user-attachments/assets/10714f44-7109-4014-8152-2bb6f7b5c705" />
+![alt text](./phaser-actualizaciones/image-3.png)
 
-## Paso 3. Configuración inicial del proyecto
+6. Selecciona la opción *Arcade*
 
-- Modificar el tamaño del video juego a 800x600, tanto en el archivo *project.config* como en *src/main.js*
-<img width="478" height="281" alt="image" src="https://github.com/user-attachments/assets/7bd495ed-8edd-4fa0-88e2-f31185789898" />
-<img width="423" height="286" alt="image" src="https://github.com/user-attachments/assets/aa0581da-8e85-4457-a256-dcb694856dca" />
+![alt text](./phaser-actualizaciones/image-4.png)
 
-- NOTA: Para guardar un cambio realizado en cualquier archivo es necesario presionar la combinación de teclas **ctrl+s**.
-- Vaciar el métodos principales en *src/Game.js* para que queden de la siguiente manera:
-<img width="480" height="394" alt="image" src="https://github.com/user-attachments/assets/26a07560-4aac-470e-ab8d-a7b3a9758035" />
+7. Selecciona *Snake* y asigna un nuevo nombre a tu juego (el de tu preferencia).
 
-- Cargar con contenido de la carpeta descargada *assets.zip* en la carpeta assets del proyecto (imagenes). Esto se puede hacer arrastrando desde el *explorador de archivos* hacia la carpeta *assets* en Phazer Launcher.
-<img width="1607" height="892" alt="image" src="https://github.com/user-attachments/assets/9f4866ef-e2ea-4a4b-b55e-d10e0dae01ac" />
+![alt text](./phaser-actualizaciones/image-5.png)
 
-## Paso 4. Precarga de recursos del proyecto
+8. Una vez abierto su nuevo *Desktop* espera instrucciones ...
 
-En este punto, el archivo *preloading.js* es quien se encarga de llevar a cabo la precarga de los recursos que serán empleados por el videojuego (imágenes y otros) y ademas les asocia un identificador (nombre) mediante el cual serán invocados en el proyecto. Por ello, hay que modificar el contenido del método *preload()* de la siguiente manera:
+![alt text](./phaser-actualizaciones/image-6.png)
 
-<img width="626" height="368" alt="image" src="https://github.com/user-attachments/assets/04d00e8a-1f75-4a7d-8b02-ab0f51df413e" />
+## Ahora a programar tu juego
 
-## Paso 5. Agregando elementos a escena
+![alt text](./phaser-actualizaciones/image-18.png)
 
-A partir de la carga de recursos, es posible comenzar a hacer uso de ellos dentro de una escena, concretamente en *Game.js*. Por ello, se pueden agregar tanto un fondo de imagen que simule el cielo, asi como bloques rellenos de simulen un piso como se muestra a continuación:
+1. Accede al código del juego que vas a construir. Da click en el botón que aparece en la parte superior izquierda (Tiene las iniciales del nombre que le diste a tu juego).
 
-<img width="653" height="333" alt="image" src="https://github.com/user-attachments/assets/e424a55b-fec0-4325-9e86-685053a6fe51" />
+![alt text](./phaser-actualizaciones/image-7.png)
 
-En este punto también es posible agregar otros elementos como sonidos asociados a los movimientos del persona principal (jugador) o eventos, como el lanzamiento de una bomba del videojuego.
+2. Selecciona *Code Editor* para abrir el editor de código de tu juego.
 
-<img width="900" height="213" alt="image" src="https://github.com/user-attachments/assets/237eb101-61e5-453a-b38d-3cd4e81446f5" />
+![alt text](./phaser-actualizaciones/image-8.png)
 
-Lo cual se renderizará de la siguiente manera:
+3. Verifica que el editor se abra.
 
-<img width="923" height="722" alt="image" src="https://github.com/user-attachments/assets/3abb4b76-2f6c-45c2-806c-cffa2a40b960" />
+![alt text](./phaser-actualizaciones/image-10.png)
 
-## Paso 6. Agregando al personaje
+4. ¿Cómo ejecutar el video juego? Identifica en la parte superior del editor el botón `Play` y presiona para ver cómo funciona tu video juego.
 
-Es necesario modificar la estructura del proyecto agregando una nueva carpeta dedntro de *src* para definir objetos adicionales que van a ser empleados en el videojuego (tales como un personaje). Por ello se crea dentro de la nueva carpeta (*gameObjects*) el archivo *Player.js* para definir sus características y comportamiento.
+![alt text](./phaser-actualizaciones/image-11.png)
 
-<img width="328" height="312" alt="image" src="https://github.com/user-attachments/assets/b85dfe19-c7d8-4413-b389-522f0b5e9fe5" />
+5. **Configura el tamaño de la pantalla**. Dentro del editor abre el archivo `main.js` (dentro de la carpeta `src`) y cambia los valores de `width` y `height`.
 
-Dicho archivo *Player.js* deberá contener la siguiente estructura general:
+![alt text](./phaser-actualizaciones/image-12.png)
 
-<img width="527" height="443" alt="image" src="https://github.com/user-attachments/assets/3f367f17-b1b0-4407-a06b-5c7e68f8434b" />
+**NOTA:** Cada vez que realices una modificación es necesario guardar los cambios. Para salvar los cambios ve al menú superior y selecciona `File` y luego da clic en `Save`, o bien, utiliza la combinación de teclas `Ctrl` + `s`.
 
-Donde:
-- **constructor()**: Se encarga de inicializar el objetito de tipo de Player.
-- **initAnimations()**: Se encarga de la inicialización de los movimientos que puede realizar el jugador.
-- **moveLeft(), moveRight(), idle(), jump()**: Contienen la definición de los movimientos del jugador.
+6. **Cargando los recursos**. Abre el archivo `preloader.js` dentro de la carpeta `scenes` y dentro del archivo ubica el segmento `preload()`.
 
-A la par de ello, en *Game.js* es necesario que dentro del método *Create()* se incluya un jugador que tendrá características como que no puede atravesar los bloques de piso, y el comportamiento dle jugador (movimientos).
+![alt text](./phaser-actualizaciones/image-13.png)
+
+Sustituye el contenido del segmento por el siguiente código: 
+
+```Javascript
+preload() {
+        /* phaser:assets:start */
+        /* phaser:assets:end */
+
+        //  Load the assets for the game - Replace with your own assets
+        //  Load the assets for the game - Replace with your own assets
+        
+        this.load.image('sky', 'https://cdn.jsdelivr.net/gh/danielvazquez-utp/myfirstProject-Phazer@main/assets/sky.png');
+        this.load.image('ground', 'https://cdn.jsdelivr.net/gh/danielvazquez-utp/myfirstProject-Phazer@main/assets/platform.png');
+        this.load.image('star', 'https://cdn.jsdelivr.net/gh/danielvazquez-utp/myfirstProject-Phazer@main/assets/star.png');
+        this.load.image('bomb', 'https://cdn.jsdelivr.net/gh/danielvazquez-utp/myfirstProject-Phazer@main/assets/bomb.png');
+        
+        this.load.spritesheet(
+            'dude',
+            'https://cdn.jsdelivr.net/gh/danielvazquez-utp/myfirstProject-Phazer@main/assets/dude.png',
+            {
+                frameWidth: 32,
+                frameHeight: 48
+            }
+        );
+
+        this.load.audio('footstep', [
+            'https://cdn.jsdelivr.net/gh/danielvazquez-utp/myfirstProject-Phazer@main/assets/footstep.ogg',
+            'https://cdn.jsdelivr.net/gh/danielvazquez-utp/myfirstProject-Phazer@main/assets/footstep.mp3'
+        ]);
+        this.load.audio('bomby', [
+            'https://cdn.jsdelivr.net/gh/danielvazquez-utp/myfirstProject-Phazer@main/assets/sci-fi.mp3'
+        ]);
+    }
+
+```
+En este punto se han agregado los recursos necesarios para el juego, tal como:
+- Imagenes:
+    - estrella
+    - bomb4
+    - piso
+    - personaje principal
+- Sonido:
+    - pasos
+    - liberación de las bomb4s
 
 
-## Paso 7. Agregando estrellas y bombas
+7. **Agregando al jugador**. Ahora, en necesario agregar una nueva carpeta de recursos adicionales la cual nombraremos `gameObjects` dentro de la carpeta `src`, dentro de la cual agregaremos un nuevo archivo `Player.js`.
 
-Una vez definido al personaje y su comportamiento, ahora toca turno a los objetos que van a interactuar con el personaje, es decir, las estrellas (que recolectará el personaje) y las bombas que buscarán evitar que el personaje cumplá su misión. Estos objetos al igual que los anteriores, serán definidos en *Game.js* dentro del método *Create()*
+Abre, el explorador de archivos presionando el botón `Phaser` y posteriormente, selecciona `File explorer`.
 
-En el mismo archivo *Game.js*, se definen de la misma manera el comportamiento de cada uno de los objetos agregados en 3 diferentes métodos:
-- **collectStar(player, star)**: Indica la manera y lógica con la que el jugador recoge estrellas, suma puntos al score y lanza el evento que libera una bomba cuando cumple la recolección de un lote de 12 estrellas.
-- **hitBomb(player, bomb)**: Indica la manera en que termina el juego una vez que el jugador es tocado por una bomba.
-- **releaseBomb()**: Indica la manera en que una bomba es liberada
-- **update**: Es un ciclo que se ejecuta y lee los movimientos del jugador para ajustar su nueva posición conforme a las teclas presionadas por el usuario del videojuego.
+![alt text](./phaser-actualizaciones/image-14.png)
 
-Una vez definidos los objetos y comportamientos de cada uno, ya se tiene listo un videojuego funcional como se muestra a contiuación:
+Una vez abierto el explorador, busca dentro de la carpeta `Projects`>`nombre de tu proyecto`>`src` y crea la nueva carpeta `gameObjects`. Para crear una nueva carpeta, da clic derecho sobre el espacio de la carpeta `src` y selcciona `New folder`.
 
-<img width="794" height="625" alt="image" src="https://github.com/user-attachments/assets/d4f5e0ae-8fa6-4022-b539-08a8e03bc451" />
+![alt text](./phaser-actualizaciones/image-15.png)
+
+Escribe el nombre y confirma presionando el botón `Create`.
+
+![alt text](./phaser-actualizaciones/image-16.png)
+
+Ahora, dentro de la carpeta `gameObjects` crea un nuevo archivo al cual nombrarás `Player.js`
+
+![alt text](./phaser-actualizaciones/image-17.png)
+
+8. **Creando al jugador principal**. Regresa al editor de código y abre el archivo `Player.js` y pega el siguiente código:
+
+```Javascript
+class Player extends Phaser.Physics.Arcade.Sprite{
+
+    constructor(scene, x, y, footstepSound){
+        super(scene, x, y, 'dude');
+        scene.add.existing(this);
+        scene.physics.add.existing(this);
+        this.setBounce(0.2);
+        this.setCollideWorldBounds(true);
+
+        // Almacena la referencia al objeto de audio
+        this.footstepSFX = footstepSound; 
+        this.walking = false; // Bandera para controlar la reproducción
+        
+        
+        this.initAnimations();
+    }
+
+    initAnimations(){
+        this.anims.create({
+            key: 'left',
+            frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        this.anims.create({
+            key: 'turn',
+            frames: [ { key: 'dude', frame: 4 } ],
+            frameRate: 20
+        });
+
+        this.anims.create({
+            key: 'right',
+            frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+            frameRate: 10,
+            repeat: -1
+        });
+        
+    }
+
+    // Reproduce el sonido de paso si no se está reproduciendo
+    playFootstep() {
+        // Verifica si el audio está sonando y si el jugador está en el suelo
+        if (!this.walking && this.body.blocked.down) { 
+            this.footstepSFX.play();
+            this.walking = true;
+            // Usa un temporizador para simular un paso (reproducir cada ~300ms)
+            this.scene.time.delayedCall(300, () => { 
+                this.walking = false;
+            });
+        }
+    }
+
+    moveLeft() {
+        this.setVelocityX(-200);
+        this.anims.play('left', true);
+        this.playFootstep(); // Llama al nuevo método
+    }
+
+    moveRight() {
+        this.setVelocityX(200);
+        this.anims.play('right', true);
+        this.playFootstep(); // Llama al nuevo método
+    }
+
+    idle() {
+        this.setVelocityX(0);
+        this.anims.play('turn');
+    }
+
+    jump() {
+        if(this.body.blocked.down)
+            this.setVelocityY(-500);
+    }
+}
+```
+
+9. **Definiendo el contenido del juego**. Toca turno a agregar tanto componentes como jugador al escenario principal y definir las acciones que puede realizar el personaje principal para ganar puntos o cuando termina el juego. Ubica el archivo `Game.js` dentro de la carpeta `src`>`scenes` y sustituye su contenido por:
+
+```Javascript
+class Game extends Phaser.Scene {
+    constructor() {
+        super('Game');
+    }
+
+    create() {
+        // Agrega un fondo de imagen a la escena
+       this.add.image(400, 300, 'sky');
+       // Define un objeto de tipo estático para el piso
+       this.platforms = this.physics.add.staticGroup();
+       // Define las dimensiones de los bloques 
+       this.platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+       // Define las posiciones de otros bloques
+       this.platforms.create(600, 400, 'ground');
+       this.platforms.create(50, 250, 'ground');
+       this.platforms.create(750, 220, 'ground');
+
+       // Crea instancias de sonido a ocupar en movimientos del jugador y en el lanzamiento de una bomba
+       
+       this.sfxFootstep = this.sound.add('footstep', { volume: 0.2, loop: false });
+       this.sfxBomby = this.sound.add('bomby', { volume: 0.5, loop: false });
+       
+       // Agrega un jugador a la escena
+       this.player = new Player(this, 100, 450, this.sfxFootstep);
+       // Efecto para que el jugador quede parado sobre la plataforma
+       this.physics.add.collider(this.player, this.platforms);
+       // Definir entradas del teclado para mover al jugador
+       this.cursors = this.input.keyboard.createCursorKeys();
+        // Crea un grupo de estrellas a ocuparse en la escena
+       this.stars = this.physics.add.group(
+        {
+            key: 'star',
+            repeat: 11,
+            setXY: {
+                x:12,
+                y:0,
+                stepX:70
+            }
+        });
+        // indica que las estrellas tendrán un pequeño rebote
+        // this.stars.children.iterate( child => {
+        //     child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+        // });
+
+        this.stars.getChildren().forEach(child => {
+            child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+        });
+
+        // Indique que las estrellas deben mantenerse sobre los bloques de piso
+        this.physics.add.collider(this.stars, this.platforms);
+        // Indica que un evento será invocado cuando dos objetos se traslapen/ocupen el mismo espacio
+        this.physics.add.overlap(this.player, this.stars, this.collectStar, null, this);
+        // Crea un marcador
+        this.score = 0;
+        // Agrega el marcado a la pantalla en una posición y color determinado
+        this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+        // Crea un objeto bomba
+        this.bombs = this.physics.add.group();
+        // Indica que las bombas deben mantenerse sobre los bloques de piso
+        this.physics.add.collider(this.bombs, this.platforms);
+        // Indica que un evento será invocado cuando el jugador y una bomba choquen/se toquen
+        this.physics.add.collider(this.player, this.bombs, this.hitBomb, null, this);
+    }
+
+    update(time) {
+        if(this.cursors.left.isDown)
+            this.player.moveLeft();
+        else if (this.cursors.right.isDown)
+            this.player.moveRight();
+        else
+            this.player.idle();
+        if(this.cursors.up.isDown)
+            this.player.jump();
+    }
+
+    collectStar(player, star){
+        star.disableBody(true, true);
+        this.score += 10;
+        this.scoreText.setText('Score: ' + this.score);
+        if(this.stars.countActive(true)===0){
+            // this.stars.children.iterate(function (child){
+            //     child.enableBody(true, child.x, 0, true, true);
+            // });
+            // this.stars.children.each(function (child) {
+            //     child.enableBody(true, child.x, 0, true, true);
+            // });
+            this.stars.getChildren().forEach(child => {
+                child.enableBody(true, child.x, 0, true, true);
+            });
+            this.releaseBomb();
+        }
+    }
+
+    hitBomb(player, bomb){
+        this.physics.pause();
+        player.setTint(0xff0000);
+        player.anims.play('turn');
+        this.time.delayedCall(2000, () =>{
+            this.scene.start('GameOver');
+        });
+    }
+
+    releaseBomb(){
+        // Reproducir el sonido antes de liberar la bomba
+        this.sfxBomby.play();
+        let x = (this.player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+        let bomb = this.bombs.create(x, 16, 'bomb');
+        bomb.setBounce(1);
+        bomb.setCollideWorldBounds(true);
+        bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+    }    
+}
+```
 
